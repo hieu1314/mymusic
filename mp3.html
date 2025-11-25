@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nhạc mp3 — Âm nhạc không biên giới</title>
+<link rel="stylesheet" href="css/mp3.css">
+<script src="common.js" defer></script>
+</head>
+<body>
+<div class="container">
+<div class="topbar">
+    <div><a class="btn" href="index.html">🏠</a></div>
+    <h2 class="fancy-title">
+    <span class="heart">❤️</span>
+        Nhạc MP3
+    <span class="butterfly">🦋</span> 
+  </h2>
+</div>
+
+
+<div class="player">
+<audio id="mp3Player" controls style="width:100%"></audio>
+<div class="controls">
+<button class="btn" id="mp3Prev">Prev</button>
+<button class="btn" id="mp3Next">Next</button>
+<button class="btn" id="mp3Shuffle"> ⚡ </button>
+</div>
+<div class="playlist" id="mp3List"></div>
+</div>
+</div>
+
+
+<script>
+const mp3s = [
+{title:'Past lives - Sapientdream',src:'mp3/Pastlives.mp3'},
+{title:'IMAGINE - John Lennon',src:'mp3/IMAGINE-John Lennon.mp3'},
+{title:'Reality - Lost Frequencies',src:'mp3/Reality.mp3'},
+{title:'My Soul Longs for You - Jesus Culture - Bethel Prayer Meeting',src:'mp3/mslfu.mp3'},
+{title:'The Sound of Silence - Disturbed',src:'mp3/TheSoundofSilence.mp3'},
+{title:'My Immortal - Evanescence',src:'mp3/MyImmortal.mp3'}
+];
+const mp3Player = document.getElementById('mp3Player');
+const mp3List = document.getElementById('mp3List');
+let idx=0;
+mp3s.forEach((t,i)=>{const el=document.createElement('div');el.className='track';el.innerHTML=`<div><div class="title">${t.title}</div><div class="meta">${t.src}</div></div><div>▶</div>`;el.addEventListener('click',()=>{play(i)});mp3List.appendChild(el)});
+function play(i){idx=i;mp3Player.src=mp3s[i].src;mp3Player.play(); highlight();}
+function highlight(){qa('.track').forEach((el,i)=>el.classList.toggle('active',i===idx));}
+function next(){idx=(idx+1)%mp3s.length;play(idx)}
+function prev(){idx=(idx-1+mp3s.length)%mp3s.length;play(idx)}
+function shuffle(){idx=Math.floor(Math.random()*mp3s.length);play(idx)}
+mp3Player.onended = next;
+document.getElementById('mp3Next').addEventListener('click',next);
+document.getElementById('mp3Prev').addEventListener('click',prev);
+document.getElementById('mp3Shuffle').addEventListener('click',shuffle);
+// autostart first
+if(mp3s.length) play(0);
+function qa(sel){return Array.from(document.querySelectorAll(sel))}
+</script>
+</body>
+</html>

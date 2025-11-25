@@ -1,1 +1,77 @@
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Âm nhạc không biên giới</title>
+<link rel="stylesheet" href="style.css">
+<script src="common.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+<h1>Âm nhạc không biên giới</h1>
+<p class="tagline">Nơi âm nhạc kết nối cảm xúc</p>
+</header>
 
+
+<!-- Nút nổi phải -->
+<div id="right-btn" class="floating-btn" onclick="location.href='falundafa.html'"></div>
+<style>
+/* Nút phải liên tục xoay */
+@keyframes spin-9-back-9 {
+  0%    { transform: rotate(0deg); }
+  25%   { transform: rotate(3240deg); }  /* 9 vòng * 360° */
+  50%   { transform: rotate(0deg); }     /* 9 vòng ngược */
+  75%   { transform: rotate(-3240deg); } /* 9 vòng thuận tiếp theo */
+  100%  { transform: rotate(0deg); }     /* lặp lại */
+}
+#right-btn {
+ top: 20px;
+  right: 20px;
+  background: url('icon/falun-logo.jpg') no-repeat center/contain;
+    position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: spin-9-back-9 36s linear infinite; /* 20s cho toàn bộ 18 vòng */
+}
+</style>
+
+
+<main class="grid">
+<a class="card" href="lyricsvietsub.html">
+<h2>Nhạc lyrics + vietsub</h2>
+<p>Playlists, lyrics và phụ đề tiếng Việt.</p>
+</a>
+
+
+<a class="card" href="videos.html">
+<h2>Videos nhạc</h2>
+<p>Trang dành cho video nhạc (mp4/webm).</p>
+</a>
+
+
+<a class="card" href="mp3.html">
+<h2>Nhạc mp3</h2>
+<p>Trang chỉ cho bật nhạc mp3.</p>
+</a>
+
+
+<a class="card" href="clips.html">
+<h2>Clips của tôi</h2>
+<p>Đưa lên clip tự quay/emix/demo.</p>
+</a>
+</main>
+
+
+<footer class="site-footer">
+<small>© <span id="year"></span> Âm nhạc không biên giới-Nguyễn Hoàng Hiếu</small>
+</footer>
+
+
+<script src="common.js" defer></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
