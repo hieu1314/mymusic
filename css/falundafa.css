@@ -375,3 +375,39 @@ body {
   border-color: var(--accent);
   box-shadow: 0 6px 20px rgba(16,185,129,0.25);
 }
+
+/* nhạc Đại Pháp */
+.footer-music {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.footer-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-songs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-song {
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fff8e1;
+  border: 2px solid #ffc107;
+  transition: 0.25s;
+}
+
+.footer-song:hover {
+  transform: scale(1.07);
+}
+
+.footer-song.selected {
+  background: #ffe082;
+  border-color: #ff9800;
+}
