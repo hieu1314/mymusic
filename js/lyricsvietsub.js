@@ -18,7 +18,8 @@ Decisions as I go, to anywhere I flow
   {id:6,title:'Bring Me To Life - Evanescence',src:'mp4/BringMeToLife.mp4',type:'video',lyrics:'...',vietsub:'...'},
    {id:7,title:'Disturbed - The Sound of Silence',src:'mp4/TheSoundofSilence.mp4',type:'video',lyrics:'...',vietsub:'...'},
 {id:8,title:'Một Đường Nở Hoa (一路生花) - Ôn Dịch Tâm (温奕心)',src:'mp4/motduongnohoa.mp4',type:'video',lyrics:'...',vietsub:'...'},
-{id:9,title:'Mad World - Gary Jules',src:'mp4/MadWorld.mp4',type:'video',lyrics:'...',vietsub:'...'}
+{id:9,title:'Mad World - Gary Jules',src:'mp4/MadWorld.mp4',type:'video',lyrics:'...',vietsub:'...'},
+{id:9,title:'Meguru Kisetsu - Azumi Inoue',src:'mp4/MeguruKisetsu.mp4',type:'video',lyrics:'...',vietsub:'...'}
 ];
 
 let current = 0;
