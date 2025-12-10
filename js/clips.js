@@ -1,6 +1,14 @@
 // Sample playlist
 const playlist = [
-   {id:1,title:'Thế Nhân Tỉnh - 世人醒',src:'videos/TheNhanTinh.mp4',type:'video'}
+   {id:1,title:'Thế Nhân Tỉnh - Thu Hiền',src:'videos/TheNhanTinh.mp4',type:'video'},
+   {id:2,title:'Pháp Luân Thánh Vương - Tam ca nam Sứ Giả',src:'videos/phapluanthanhvuong.mp4',type:'video'},
+   {id:3,title:'Pháp Chính Càn Khôn - Tam ca nam Sứ Giả',src:'videos/phapchinhcangkhon.mp4',type:'video'},
+   {id:4,title:'Phong Vũ Đồng Thuyền - Hợp ca Sứ Giả',src:'videos/phongvudongthuyen.mp4',type:'video'},
+   {id:5,title:'Tạ Ân Sư - Tùng Lâm & Hợp Xướng Sứ Giả',src:'videos/taansu.mp4',type:'video'},
+   {id:6,title:'Lời Nguyện Ước Tân Niên (2021)',src:'videos/loinguyenuoctannien.mp4',type:'video'},
+   {id:7,title:'Tôi thấy gì nơi QUÁN TRỌ trần gian?',src:'videos/quantro.mp4',type:'video'},
+   {id:8,title:'Tiếng Gọi Của Thần - Thu Hiền',src:'videos/tienggoicuathan.mp4',type:'video'},
+   {id:9,title:'Tỉnh Mộng - Liên Hoa',src:'videos/tinhmong.mp4',type:'video'}
 ];
 
 let current = 0;
