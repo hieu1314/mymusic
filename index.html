@@ -69,10 +69,20 @@
 <small>© <span id="year"></span> Âm nhạc không biên giới-Nguyễn Hoàng Hiếu</small>
 </footer>
 
+<!-- STAR LAYER -->
+<div id="star-layer"></div>
 
-<script src="common.js" defer></script>
+<!-- VIEWER -->
+<div id="viewer" class="hidden">
+  <span class="close" onclick="closeViewer()">×</span>
+  <button id="prevImg">&#10094;</button>
+  <img id="viewerImg">
+  <button id="nextImg">&#10095;</button>
+</div>
+
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
